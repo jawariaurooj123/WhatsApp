@@ -1,84 +1,103 @@
-let contacts = [
-    {
-        name: "Jiya Khan",
-        lastSeen : `<i class="fas fa-clock"></i>`,
-        message: "blah blah blah blah blah bl...",
-        number: `246876513554`,
-        email: `JIYA1@gmail.com`,
-    },
+let contactsInfo = [
+{
+ name: "Jiya Khan",
+ number: `246876513554`,
+ lastMsg: "blah blah blah blah blah bl...",
+ lastSeen : `<i class="fas fa-clock"></i>`,
+ email: `JIYA1@gmail.com`,
+ img : `<i class="fas fa-user-circle"></i>`
 
-    {
-        name: "Bilal",
-        lastSeen : `<i class="fas fa-clock"></i>`,
-        message: "blah blah blah blah blah bl...",
-        number:`705704957340575`,
-        email: `Bilal@gmail.com`,
-    },
+},
 
-    {
-        name: "Nimra cuzn",
-        lastSeen : `<i class="fas fa-clock"></i>`,
-        message: "blah blah blah blah blah bl...",
-        number: `0874604967606`,
-        email: `Nimra123@gmail.com`,
-    },
+{
+  name: "Bilal",
+  number:`705704957340575`,
+  lastMsg: "blah blah blah blah blah bl...",
+  lastSeen : `<i class="fas fa-clock"></i>`,
+  email: `Bilal@gmail.com`,
+  img : `<i class="fas fa-user-circle"></i>`
+},
 
-    {
-        name: "Ahmed Khan",
-        lastSeen : `<i class="fas fa-clock"></i>`,
-        message: "blah blah blah blah blah bl...",
-        number: `032178785349575`,
-        email: `Ahmed@gmail.com`,
-    },
+{
+  name: "Nimra cuzn",
+  number: `0874604967606`,
+  lastMsg: "blah blah blah blah blah bl...",
+  lastSeen : `<i class="fas fa-clock"></i>`,
+  email: `Nimra123@gmail.com`,
+  img : `<i class="fas fa-user-circle"></i>`
+},
 
-    {
-        name: "Saboor",
-        lastSeen : `<i class="fas fa-clock"></i>`,
-        message: "blah blah blah blah blah bl...",
-        number: `0321255678`,
-        email: `saboor2904@gmail.com`,
-    },
 
-    {
-        name: "Yumna ",
-        lastSeen : `<i class="fas fa-clock"></i>`,
-        message: "blah blah blah blah blah bl...",
-        number: `0333678676`,
-        email: `yumna6789@gmail.com`,
-    },
+{
+  name: "Ahmed Khan",
+  number: `032178785349575`,   
+  lastMsg: "blah blah blah blah blah bl...",
+  lastSeen : `<i class="fas fa-clock"></i>`,
+  email: `Ahmed@gmail.com`,
+  img : `<i class="fas fa-user-circle"></i>`
+},
 
-    {
-        name: "Rabika schol",
-       lastSeen : `<i class="fas fa-clock"></i>`,
-        message: "blah blah blah blah blah bl...",
-        number: `12329830203232`,
-        email: `rabika456@gmail.com`,
-    },
 
-    {
-        name: "Habib",
-       lastSeen : `<i class="fas fa-clock"></i>`,
-        message: "blah blah blah blah blah bl..."
-        number: `0347788537`,
-        email: `Raohabib@gmail.com`,
-    },
+{
+  name: "Saboor",
+  number: `0321255678`,
+  lastSeen : `<i class="fas fa-clock"></i>`,
+  lastMsg: "blah blah blah blah blah bl...",
+  email: `saboor2904@gmail.com`,
+  img : `<i class="fas fa-user-circle"></i>`
+},
 
-    {
-        name: "hasiba cntr",
-        lastSeen : `<i class="fas fa-clock"></i>`,
-        message: "blah blah blah blah blah bl...",
-        number: `03221776538`,
-        email: `princess@gmail.com`,
-    }
-]
+
+{
+  name: "Yumna ",
+  lastSeen : `<i class="fas fa-clock"></i>`,
+  lastMsg: "blah blah blah blah blah bl...",
+  number: `0333678676`,
+  email: `yumna6789@gmail.com`,
+  img : `<i class="fas fa-user-circle"></i>`
+},
+
+
+{
+ name: "Rabika schol",
+ lastSeen : `<i class="fas fa-clock"></i>`,
+ lastMsg: "blah blah blah blah blah bl...",
+ number: `12329830203232`,
+ email: `rabika456@gmail.com`,
+ img : `<i class="fas fa-user-circle"></i>`
+},
+
+
+{
+  name :"babar",
+  number : "03013462928",
+  lastMsg : "blah blah",
+  lastSeen : `<i class="fas fa-check-double"></i>`,
+  email : "12345@gmail.com",
+  img : `<i class="fas fa-user-circle"></i>`
+},
+
+
+{
+ name: "hasiba cntr",
+ number: `03221776538`,
+ lastMsg: "blah blah blah blah blah bl...",
+ lastSeen : `<i class="fas fa-clock"></i>`,
+ email: `princess@gmail.com`,
+ img :`<i class="fas fa-user-circle"></i>`
+}
+
+
+];
 
 
 function initilizar() {
-	let contactsInfoGroupEl = document.querySelector(".name-list");
-	for (let i=0; i<10; i++) {
-		contactsInfoGroupEl.innerHTML += `<div class="list-item"> ${contactsInfo[i].img}<div class="names-flex" onclick="changeInfo(${i})" >
-    <span> ${contactsInfo[i].name}</span><span class="spans-1"><span class="lastSeen1"> ${contactsInfo[i].lastSeen}  ${contactsInfo[i].lastMsg}</span></span></span></div></div>`;
-	}
+// celebritiesGroupEl
+let contactsInfoGroupEl = document.querySelector(".name-list");
+for (let i=0; i<10; i++) {
+  contactsInfoGroupEl.innerHTML += `<div class="list-item"> ${contactsInfo[i].img}<div class="names-flex" onclick="changeInfo(${i})" >
+  <span> ${contactsInfo[i].name}</span><span class="spans-1"><span class="lastSeen1"> ${contactsInfo[i].lastSeen}  ${contactsInfo[i].lastMsg}</span></span></span></div></div>`;
+}
 
 }
 
@@ -100,3 +119,16 @@ function  changeInfo(InfoIndex){
 
 }
 
+
+
+
+
+
+  //   celebritiesGroupEl.innerHTML += `
+  //         <div class="celebrity-img-div" 
+  //           style="background-image: url(images/${celebrities[i].imgURL})"
+  //           onclick="changeCeleb(${i})">
+  //           <p class="celebrity-img-text">${celebrities[i].name}</p>
+  //           </div>`
+  // }
+  // changeCeleb(0);
